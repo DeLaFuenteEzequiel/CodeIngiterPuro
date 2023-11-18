@@ -25,6 +25,7 @@
               </div>
 
               <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+              <a class="btn btn-primary" href="<?php echo site_url('users_controller/index')?>">Regresar</a>
      
         </form>
 

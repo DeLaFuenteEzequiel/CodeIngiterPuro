@@ -1,4 +1,5 @@
 <div class="container">
+
 <div class="card">
 
     <table class="table">
@@ -32,4 +33,35 @@
     <a class="btn btn-primary" href="<?php echo site_url('inicio_controller/index')?>">Regresar</a>
 
 </div>
+</div>
+
+<div class = "container">
+
+    <div class="row mt-3">
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <button class="btn btn-primary" id="btnCalcularPromedio">Calcular Promedio de Sueldos</button>
+                    <button class="btn btn-success" id="btnCalcularTotal">Calcular Total de Sueldos</button>
+                    <button class="btn btn-warning" id="btnMenorSueldo">Menor Sueldo</button>
+                    <button class="btn btn-danger" id="btnMayorSueldo">Mayor Sueldo</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Resultados</h5>
+                    <p id="resultadoPromedio">Promedio: <span class="font-weight-bold">-</span></p>
+                    <p id="resultadoTotal">Total: <span class="font-weight-bold">-</span></p>
+                    <p id="resultadoMenorSueldo">Menor Sueldo: <span class="font-weight-bold">-</span></p>
+                    <p id="resultadoMayorSueldo">Mayor Sueldo: <span class="font-weight-bold">-</span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>

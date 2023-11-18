@@ -29,7 +29,12 @@
     </tbody>
     </table>
 
+    <div class= "container">
+        <div class="card">
     <a class="btn btn-primary" href="<?php echo site_url('users_controller/index')?>">Usuarios</a>
+    <br>
     <a class="btn btn-primary" href="<?php echo site_url('users_controller/create')?>">Agregar Usuarios</a>
+        </div>
+    </div>
 </div>
 </div>
