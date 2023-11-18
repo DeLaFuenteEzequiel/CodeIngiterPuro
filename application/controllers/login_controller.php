@@ -17,12 +17,14 @@ class login_controller extends CI_Controller {
     public function login(){
         $user=$this->input->post("user");
         $password=$this->input->post("password");
-        if ($this->users_model->validation_login($user,$password)){
+        error_log("entra");
+        if ($this->users_model->validate_login($user,$password)){
             redirect("inicio_controller/index");
         }else{
             redirect("login_controller/index");
         }
     }
+    
 
 }
 

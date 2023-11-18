@@ -1,6 +1,9 @@
 <?php
 class users_model extends CI_Model {
-    protected $table = "users";protected $pk = "user_id";
+    protected $table = "users";
+    protected $pk = "user_id";
+    protected $user="user";
+    protected $pass="password";
 
     public function create($data = array()) {
         $this->db->insert($this->table, $data);
@@ -33,17 +36,33 @@ class users_model extends CI_Model {
         }
     }
 
-    public function login($data) {
+   /* public function validate_login($user=null,$password=null) {
         $this->db->select("*");
-        $this->db->where("user", $data['user']);
-        $this->db->where("password", $data['password']);
+        $this->db->where("user", $user);
+        $this->db->where("password",$password );
         $this->db->limit(1);
         $res = $this->db->get($this->table);
-
+        error_log("taaca");
         if ($res->num_rows() > 0) {
             return $res->row_array();
         } else {
             return false;
         }
+    }*/
+
+    public function validate_login($user=null,$password=null){
+        if(!is_null($user)){
+            if(!is_null($password)){
+                $this->db->where($this->user,$user);
+                $this->db->where($this->password,$password);
+                $this->db->limit(1);
+                $this->db->get($this->tabla)->row_array();
+                if ($this->db->affected_rows()){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
+

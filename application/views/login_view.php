@@ -9,7 +9,7 @@
                         <input type="text" class="form-control" id="user" name="user">
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="password" name= "password">
+                        <input type="password" class="form-control" id="password" name="password">
                     </div>
 
                     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
