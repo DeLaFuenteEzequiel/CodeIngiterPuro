@@ -17,7 +17,6 @@ class login_controller extends CI_Controller {
     public function login(){
         $user=$this->input->post("user");
         $password=$this->input->post("password");
-        error_log("entra");
         if ($this->users_model->validate_login($user,$password)){
             redirect("inicio_controller/index");
         }else{
@@ -28,3 +27,4 @@ class login_controller extends CI_Controller {
 
 }
 
+?>

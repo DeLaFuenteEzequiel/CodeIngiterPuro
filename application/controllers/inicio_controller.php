@@ -13,3 +13,5 @@ class inicio_controller extends CI_Controller {
     }
     
 }
+
+?>

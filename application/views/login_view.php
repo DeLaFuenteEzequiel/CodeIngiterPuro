@@ -1,21 +1,13 @@
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-md-6 offset-md-3">
-            <div class= "card">
-                <h2 class="text-center">Iniciar Sesión</h2>
-                <form method="post" action="<?php echo site_url("login_controller/login")?>">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Usuario</label>
-                        <input type="text" class="form-control" id="user" name="user">
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
-                </form>
-            </div>
-     
+<div class="card w-50 mt-5 mx-auto">
+    <form class="card-body" method="post" action="<?php echo site_url("login_controller/login")?>">
+        <div class="form-group">
+            <label>Usuario</label>
+            <input type="text" class="form-control" name="user" >
         </div>
-    </div>
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+    </form>
 </div>
