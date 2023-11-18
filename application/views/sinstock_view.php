@@ -1,0 +1,1 @@
+<h1>No se puede mostrar el objeto (No hay stock)</h1>

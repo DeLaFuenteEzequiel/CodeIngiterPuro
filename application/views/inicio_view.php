@@ -1,3 +1,4 @@
+<div class="container">
 <div class="card">
 
     <table class="table">
@@ -28,4 +29,5 @@
     </tbody>
     </table>
 
+</div>
 </div>
