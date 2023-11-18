@@ -36,11 +36,11 @@ class inicio_controller extends CI_Controller {
 	public function status($object_id,$status){
 		if(!is_null($object_id)){
 			if($status==0){
-				$set=1;
+				$new_status=1;
 			}else{
-				$set=0;
+				$new_status=0;
 			}
-			$data["object"] = $this->objects_model->edit($object_id,$set);
+			$data["object"] = $this->objects_model->edit($object_id,$new_status);
 				
 		}
 		redirect("inicio_controller/index");

@@ -28,7 +28,7 @@ class objects_model extends CI_Model {
             $this->db->where($this->pk,$object_id);
             $this->db->set($this->status,$status);
         }
-        $this->db->update($this->tabla);
+        $this->db->update($this->table);
     }
    
 
