@@ -1,7 +1,6 @@
 <?php
 class users_model extends CI_Model {
-    protected $table = "users";
-    protected $pk = "user_id";
+    protected $table = "users";protected $pk = "user_id";
 
     public function create($data = array()) {
         $this->db->insert($this->table, $data);

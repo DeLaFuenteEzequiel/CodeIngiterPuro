@@ -13,4 +13,16 @@ class login_controller extends CI_Controller {
         $this->load->view('login_view');
         $this->load->view('footer');
     }
+
+    public function login(){
+        $user=$this->input->post("user");
+        $password=$this->input->post("password");
+        if ($this->users_model->validation_login($user,$password)){
+            redirect("inicio_controller/index");
+        }else{
+            redirect("login_controller/index");
+        }
+    }
+
 }
+

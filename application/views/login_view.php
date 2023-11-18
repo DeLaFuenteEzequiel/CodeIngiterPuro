@@ -3,7 +3,7 @@
         <div class="col-md-6 offset-md-3">
             <div class= "card">
                 <h2 class="text-center">Iniciar Sesión</h2>
-                <form>
+                <form method="post" action="<?php echo site_url("login_controller/login")?>">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Usuario</label>
                         <input type="text" class="form-control" id="user" name="user">
