@@ -1,6 +1,5 @@
 <?php
-class UsersModel extends CI_Model {
-
+class users_model extends CI_Model {
     protected $table = "users";
     protected $pk = "user_id";
 

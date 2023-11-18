@@ -57,9 +57,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['usuarios'] = 'inicio/index';
 $route['crear_usuario'] = 'inicio/crear_usuario';*/
 
-$route['default_controller'] = 'UsuariosController';
+$route['default_controller'] = 'login_controller';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-$route['usuarios'] = 'UsuariosController/index';
-$route['usuarios/crear'] = 'UsuariosController/crear';
