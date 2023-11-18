@@ -36,6 +36,13 @@ class users_model extends CI_Model {
             return 0;
         }
     }
+
+    public function update($user_id=null, $data=array()){
+        $this->db->where($this->pk, $user_id);
+        $this->db->update($this->table, $data);
+        return $this->db->affected_rows();
+    }
+
 }
 ?>
 
