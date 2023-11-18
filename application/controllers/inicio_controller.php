@@ -7,8 +7,9 @@ class inicio_controller extends CI_Controller {
     }
 
     public function index() {
+        $data["objects"] = $this->objects_model->get_all_objects();
         $this->load->view('header');
-        $this->load->view('inicio_view');
+        $this->load->view('inicio_view',$data);
         $this->load->view('footer');
     }
     

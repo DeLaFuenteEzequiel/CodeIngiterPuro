@@ -2,7 +2,7 @@
 class users_model extends CI_Model {
     protected $table = "users";
     protected $pk = "user_id";
-  
+    
 
    public function validate_login($user,$password) {
         $this->db->select("*");
