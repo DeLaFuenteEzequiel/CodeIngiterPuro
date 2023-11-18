@@ -37,7 +37,42 @@ class users_controller extends CI_Controller {
         redirect("users_controller/index");
     }
    
+    public function show($user_id){
+		
+			$data["user"] = $this->users_model->get_users($user_id);			
+			$this->load->view('header');
+			$this->load->view('user_detail_view',$data);
+			$this->load->view('footer');			
+	}
 
+    public function create() {
+        $this->load->view('header');
+        $this->load->view('create_user_view');
+        $this->load->view('footer');
+    }
+
+    public function insert_user() {
+        
+        $this->form_validation->set_rules('user', 'Nombre de Usuario', 'required');
+        $this->form_validation->set_rules('password', 'Contraseña', 'required');
+        $this->form_validation->set_rules('antiquity', 'Antiguedad', 'required');
+        $this->form_validation->set_rules('salary', 'Salario', 'required');
+        $this->form_validation->set_message('required', 'El campo %s es obligatorio.');
+
+        if ($this->form_validation->run() == false) {
+            $this->create();
+        } else {
+            $data = array(
+                'user' => $this->input->post('user'),
+                'password' => $this->input->post('password'),
+                'antiquity' => $this->input->post('antiquity'),
+                'salary' => $this->input->post('salary')
+            );
+
+            $this->users_model->create($data);
+            redirect("users_controller/index");
+        }
+    }
 
 
 }

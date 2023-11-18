@@ -43,6 +43,11 @@ class users_model extends CI_Model {
         return $this->db->affected_rows();
     }
 
+    public function create($data = array()) {
+        $this->db->insert($this->table, $data);
+        return $this->db->insert_id();
+    }
+
 }
 ?>
 

@@ -21,7 +21,7 @@ class inicio_controller extends CI_Controller {
 			$data["object"] = $this->objects_model->get_object($object_id);
 			if($data["object"]["status"]==1){
 				$this->load->view('header');
-				$this->load->view('detalles_view',$data);
+				$this->load->view('object_detail_view',$data);
 				$this->load->view('footer');
 			}else{
 				$this->load->view('header');

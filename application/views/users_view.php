@@ -29,5 +29,7 @@
     </tbody>
     </table>
 
+    <a class="btn btn-primary" href="<?php echo site_url('inicio_controller/index')?>">Regresar</a>
+
 </div>
 </div>

@@ -30,5 +30,6 @@
     </table>
 
     <a class="btn btn-primary" href="<?php echo site_url('users_controller/index')?>">Usuarios</a>
+    <a class="btn btn-primary" href="<?php echo site_url('users_controller/create')?>">Agregar Usuarios</a>
 </div>
 </div>
