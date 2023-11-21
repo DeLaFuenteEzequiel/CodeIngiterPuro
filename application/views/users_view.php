@@ -65,3 +65,50 @@
     </div>
 
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+$(document).ready(function () {
+
+    
+    var salarios = <?php echo json_encode(array_map('floatval', array_column($users, 'salary'))); ?>;
+
+    $("#btnCalcularPromedio").click(function () {
+        var promedio = calcularPromedio(salarios);
+        $("#resultadoPromedio span").text(promedio);
+    });
+
+    $("#btnCalcularTotal").click(function () {
+        var total = calcularTotal(salarios);
+        $("#resultadoTotal span").text(total);
+    });
+ 
+    $("#btnMenorSueldo").click(function () {
+        var menorSueldo = encontrarMenorSueldo(salarios);
+        $("#resultadoMenorSueldo span").text(menorSueldo);
+    });
+   
+    $("#btnMayorSueldo").click(function () {
+        var mayorSueldo = encontrarMayorSueldo(salarios);
+        $("#resultadoMayorSueldo span").text(mayorSueldo);
+    });
+
+    function calcularPromedio(array) {
+        var sum = array.reduce(function (a, b) { return a + b; }, 0);
+        return (sum / array.length).toFixed(2);
+    }
+
+    function calcularTotal(array) {
+        return array.reduce(function (a, b) { return a + b; }, 0);
+    }
+
+    function encontrarMenorSueldo(array) {
+        return Math.min.apply(null, array);
+    }
+
+    function encontrarMayorSueldo(array) {
+        return Math.max.apply(null, array);
+    }
+
+});
+</script>
